@@ -57,38 +57,38 @@ bool isCorrect(std::string strtmp ){
 int main(int argc, char *argv[])
 {
 
-    // crow::SimpleApp app;
-    //
-    // CROW_ROUTE(app, "/<string>")
-    // (
-    //   [](std::string word){
-    //     bool correct = isCorrect(word);
-    //     string correctToString = correct ? "true" : "false";
-    //     return "<div><h1>"+ correctToString + "</h1></div>";
-    //   }
-    // );
-    //
-    // char* port = getenv("PORT");
-    // uint16_t iport = static_cast<uint16_t>(port != NULL ? stoi(port) : 18080);
-    //
-    // cout<< "PORT = " << iport << "\n";
-    //
-    // app.port(iport).multithreaded().run();
+    crow::SimpleApp app;
+
+    CROW_ROUTE(app, "/<string>")
+    (
+      [](std::string word){
+        bool correct = isCorrect(word);
+        string correctToString = correct ? "true" : "false";
+        return "<div><h1>"+ correctToString + "</h1></div>";
+      }
+    );
+
+    char* port = getenv("PORT");
+    uint16_t iport = static_cast<uint16_t>(port != NULL ? stoi(port) : 18080);
+
+    cout<< "PORT = " << iport << "\n";
+
+    app.port(iport).multithreaded().run();
 
     //To use it directly from command line, Uncomment below line and comment out line 62-78
-    cout << endl << "******** Spell Checker ********"<< endl << endl;
-  	cout << "******** Please enter any word" << endl;
-    char* s1;
-    std::string strtmp;
-    cin >> strtmp;
-
-    bool check = isCorrect(strtmp);
-
-    if (check == true){
-      cout << "******** It is a Valid Word, No Problem" << endl;
-    }else{
-      cout << "******** Entered Word is incorrect, Please check again... " << endl << endl;
-    }
+    // cout << endl << "******** Spell Checker ********"<< endl << endl;
+  	// cout << "******** Please enter any word" << endl;
+    // char* s1;
+    // std::string strtmp;
+    // cin >> strtmp;
+    //
+    // bool check = isCorrect(strtmp);
+    //
+    // if (check == true){
+    //   cout << "******** It is a Valid Word, No Problem" << endl;
+    // }else{
+    //   cout << "******** Entered Word is incorrect, Please check again... " << endl << endl;
+    // }
 
     return 0;
 }

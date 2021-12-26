@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/usr/local/opt/openssl@1.1/lib CMakeFiles/spell_checker.dir/main.cpp.o -o spell_checker  /opt/homebrew/lib/libboost_system-mt.dylib /opt/homebrew/lib/libboost_filesystem-mt.dylib 

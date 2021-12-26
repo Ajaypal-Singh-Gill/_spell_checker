@@ -1,0 +1,3 @@
+/Users/ajaypalgill/desktop/_spellchecker/build/CMakeFiles/spell_checker.dir
+/Users/ajaypalgill/desktop/_spellchecker/build/CMakeFiles/edit_cache.dir
+/Users/ajaypalgill/desktop/_spellchecker/build/CMakeFiles/rebuild_cache.dir
